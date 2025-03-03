@@ -31,9 +31,11 @@ jobs:
           if [ "${{ github.ref_name }}" == "main" ]; then
             echo "ASTRO_SITE=https://beeyouself.com/" >> $GITHUB_ENV
             echo "S3_BUCKET_NAME=${{ secrets.S3_PROD_BUCKET_NAME }}" >> $GITHUB_ENV
+            echo "ASTRO_ENVIRONMENT=Production" >> $GITHUB_ENV
           else
             echo "ASTRO_SITE=https://yourdevelopmentdomain.com" >> $GITHUB_ENV
             echo "S3_BUCKET_NAME=${{ secrets.S3_DEV_BUCKET_NAME }}" >> $GITHUB_ENV
+            echo "ASTRO_ENVIRONMENT=Development" >> $GITHUB_ENV
           fi
 
       - name: Build Astro project
