@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import planet from "/public/images/planet.svg";
+import logo from "/public/images/hero-logo.svg";
+import smallstar from "/public/images/star-small.svg";
+import mediumstar from "/public/images/star-medium.svg";
+import largestar from "/public/images/star-large.svg";
+import halfmoon from "/public/images/half-moon.svg";
+---
+
+<div
+  class="pt-[12rem] h-screen max-h-[65rem] select-none flex flex-col items-center justify-center bg-gradient-to-b from-[var(--color-background-black)] to-[var(--color-background-dark)] text-[var(--color-text-main)] relative"
+>
+  <div>
+    <div class="relative text-center bg-inherit">
+      <Image
+        src={planet}
+        decoding="async"
+        alt="planet"
+        class="w-38 h-auto -left-15 -top-10 absolute z-0"
+        width={150}
+        height={150}
+        style={{
+          clipPath:
+            "polygon(0 0, 100% 0, 100% 20%, 100% 45%, 70% 55%, 54% 100%, 0 100%, 0% 20%)",
+        }}
+      />
+      <Image
+        src={smallstar}
+        alt=""
+        class="w-8 h-auto absolute z-0 -top-20 right-0"
+      />
+      <Image
+        src={mediumstar}
+        alt=""
+        class="w-12 h-auto absolute z-0 -top-17 right-25"
+      />
+      <Image
+        src={largestar}
+        alt=""
+        class="w-20 h-auto absolute z-0 -top-5 right-5"
+      />
+      <h1
+        class="text-[var(--color-font-gold)] text-8xl absolute left-34 bottom-52"
+      >
+        digital
+      </h1>
+      <div class="relative">
+        <h1
+          class="text-[var(--color-font-gold)] text-[16rem] leading-none relative z-10"
+        >
+          <span>C</span>reator
+        </h1>
+        <Image
+          src={halfmoon}
+          alt=""
+          class="w-auto h-auto absolute z-0 bottom-0 -right-[7rem]"
+        />
+      </div>
+
+      <p class="text-[#FFFFFF] text-2xl text-right">
+        MARÍA JOSÉ VERÓNICA CATALÁN GACITÚA
+      </p>
+    </div>
+  </div>
+  <div class="mt-[8rem]">
+    <Image
+      src={logo}
+      decoding="async"
+      alt="logo"
+      class="w-58 h-auto"
+      width={200}
+      height={200}
+    />
+  </div>
+</div>

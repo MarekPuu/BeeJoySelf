@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-nav: #30111c;
+  --color-primary-theme-dark-red: #590523;
+  --color-primary-theme-light-red: #ff6d6c;
+  --color-primary-theme-medium-red: #ba435d;
+
+  --color-gradient-red-stop-1: #000000; /* Dark Red */
+  --color-gradient-red-stop-2: #590523; /* Intermediate Red */
+  --color-gradient-red-stop-3: #a63448; /* Medium Red */
+  --color-gradient-red-stop-4: #ff6d6c; /* Light Coral */
+
+  --color-font-gold: #cc9f64;
+  height: 110vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Instrument Serif", serif;
+}

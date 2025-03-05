@@ -1,0 +1,72 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+---
+
+<div
+  class="w-[90%] bg-[var(--color-primary-theme-light-red)] mx-auto flex justify-center rounded-[0.3rem] p-8 flex-col"
+>
+  <div class="w-fit mx-auto">
+    <SectionHeader text="My products" />
+    <div class="grid grid-cols-3 gap-4 mt-8">
+      <div
+        class="w-75 bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3))] h-60 rounded-[0.3rem] shadow-[2px_6px_10px_rgba(0,0,0,0.25)] flex justify-start items-end"
+      >
+        <p
+          class="text-white text-3xl p-4 text-left w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]"
+        >
+          Digital stickers
+        </p>
+      </div>
+      <div
+        class="w-75 bg-[url('public/images/water-wallpaper.png')] bg-cover bg-center h-60 rounded-[0.3rem] shadow-[2px_6px_10px_rgba(0,0,0,0.25)] flex justify-start items-end"
+      >
+        <p
+          class="text-white text-3xl p-4 text-center w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]"
+        >
+          Quality wallpapers
+        </p>
+      </div>
+
+      <div
+        class="w-75 bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3))] h-60 rounded-[0.3rem] shadow-[2px_6px_10px_rgba(0,0,0,0.25)] flex justify-start items-end"
+      >
+        <p
+          class="text-white text-3xl p-4 text-right w-full drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]"
+        >
+          Digital planners
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-8 w-full">
+    <SectionHeader text="Who am i?" />
+    <div
+      class="mt-8 max-w-[50rem] w-[75%] mx-auto bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3))]
+      rounded-[0.3rem] p-8 shadow-[2px_6px_10px_rgba(0,0,0,0.25)] flex justify-between"
+    >
+      <div class="flex flex-col w-[47%]">
+        <div class="bg-gray-400 w-[100%] h-50 rounded-[0.3rem] mx-auto"></div>
+        <p class="text-center mt-8 text-white text-2xl">
+          MARÍA JOSÉ VERÓNICA <br /> CATALÁN GACITÚA
+        </p>
+      </div>
+      <div class="flex flex-col w-[47%]">
+        <p class="text-white text-2xl text-left">About me!</p>
+        <p class="text-white text-1xl text-left mt-4">
+          I am a digital artist who creates digital stickers, wallpapers, and
+          planners. I have been creating digital art for over 5 years and I love
+          what I do. I am passionate about creating beautiful and unique designs
+          that inspire and motivate people. My goal is to create art that brings
+          joy and positivity to people's lives.
+        </p>
+        <div class="mt-auto mb-0 flex justify-end items-center">
+          <p class="text-white text-1xl text-right">Read more about me</p>
+          <span
+            class="iconify text-white ml-2"
+            data-icon="material-symbols:play-arrow-rounded"
+            data-inline="false"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
