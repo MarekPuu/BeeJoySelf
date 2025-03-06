@@ -8,6 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
+  prefetch: true,
   output: "static",
   site: process.env.ASTRO_SITE || "http://localhost:4321",
   vite: {

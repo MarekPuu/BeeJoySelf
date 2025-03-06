@@ -1,0 +1,41 @@
+---
+import SectionHeader from "../SectionHeader.astro";
+---
+
+<div class="mx-auto mt-8 w-full">
+  <SectionHeader text="Who am i?" />
+  <div
+    class="mt-8 xl:max-w-[50rem] xl:w-[75%] w-[100%] mx-auto bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3))]
+      rounded-[0.3rem] p-6 sm:p-8 shadow-[2px_6px_10px_rgba(0,0,0,0.25)] flex-col-reverse sm:flex-row flex justify-between"
+  >
+    <div class="flex flex-col sm:w-[47%]">
+      <div class="bg-gray-400 w-[100%] h-50 rounded-[0.3rem] mx-auto"></div>
+      <p class="text-center mt-8 text-white text-2xl">
+        MARÍA JOSÉ VERÓNICA <br /> CATALÁN GACITÚA
+      </p>
+    </div>
+    <div class="flex flex-col sm:w-[47%]">
+      <p class="text-white text-2xl text-left">About me!</p>
+      <p class="text-white text-1xl text-left mt-4">
+        I am a digital artist who creates digital stickers, wallpapers, and
+        planners. I have been creating digital art for over 5 years and I love
+        what I do. I am passionate about creating beautiful and unique designs
+        that inspire and motivate people. My goal is to create art that brings
+        joy and positivity to people's lives.
+      </p>
+      <div class="mt-auto mb-0 justify-end flex">
+        <a
+          data-astro-prefetch
+          href="/about"
+          class="no-underline flex justify-end items-center text-[#ffffff] hover:text-[#E0E0E0] transition-colors duration-200"
+        >
+          <p class="text-1xl text-right py-5 sm:py-0">Read more about me</p>
+          <span
+            class="iconify ml-2"
+            data-icon="material-symbols:play-arrow-rounded"
+            data-inline="false"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroSection from "../components/HomePage/HeroSection.astro";
-import MiddleSection from "../components/HomePage/MiddleSection.astro";
+import MiddleSection from "../components/HomePage/MiddleSection/index.astro";
 ---
 
 <Layout>
   <div
-    class="h-[200vh] bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3),var(--color-gradient-red-stop-4))] bg-cover bg-no-repeat"
+    class="min-h-[200vh] bg-[linear-gradient(to_bottom,var(--color-gradient-red-stop-1),var(--color-gradient-red-stop-2),var(--color-gradient-red-stop-3),var(--color-gradient-red-stop-4))] bg-cover bg-no-repeat"
   >
     <div class="mx-auto max-w-[90rem]">
       <HeroSection />
