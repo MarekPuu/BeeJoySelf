@@ -5,13 +5,13 @@ const NavBar = () => {
     >
       <div className="flex space-x-12 text-lg font-light tracking-wide ">
         <a
-          href="about"
+          href="/about"
           className="text-[#E0E0E0] hover:text-[#FFFFFF] transition-colors duration-200 text-2xl"
         >
           About me
         </a>
         <a
-          href="gallery"
+          href="/gallery"
           className="text-[#E0E0E0] hover:text-[#FFFFFF] transition-colors duration-200 text-2xl"
         >
           Gallery
