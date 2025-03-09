@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import planet from "../../assets/images/planet.svg";
-import logo from "../../assets/images/hero-logo.svg";
-import smallstar from "../../assets/images/star-small.svg";
-import mediumstar from "../../assets/images//star-medium.svg";
-import largestar from "../../assets/images/star-large.svg";
-import halfmoon from "../../assets/images/half-moon.svg";
+import planet from "../../assets/images/planet.png";
+import logo from "../../assets/images/hero-logo.png";
+import smallstar from "../../assets/images/star-small.png";
+import mediumstar from "../../assets/images//star-medium.png";
+import largestar from "../../assets/images/star-large.png";
+import halfmoon from "../../assets/images/half-moon.png";
 ---
 
 <div
@@ -15,7 +15,6 @@ import halfmoon from "../../assets/images/half-moon.svg";
     <div class="relative text-center ">
       <Image
         src={planet}
-        decoding="async"
         alt="planet"
         class="lg:w-38 sm:w-32 w-16 h-auto -left-7 -top-5 sm:-left-15 sm:-top-10 lg:-top-11 absolute z-0 clip-path-moon"
         width={150}
