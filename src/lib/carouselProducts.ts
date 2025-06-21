@@ -1,6 +1,6 @@
 import type { CarouselProduct } from "../types/carouselProduct";
 import carouselBg from "../assets/images/carousel-bg.png";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/Logo.png";
 
 export const carouselProducts: CarouselProduct[] = [
   {
