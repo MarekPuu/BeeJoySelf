@@ -1,0 +1,127 @@
+---
+import { carouselProducts } from "../../../lib/carouselProducts";
+import ProductCard from "./ProductCard.astro";
+
+const products = [
+  ...carouselProducts,
+  ...carouselProducts,
+  ...carouselProducts,
+];
+const itemWidth = 350;
+const gap = 16;
+const singleSetWidth = carouselProducts.length * (itemWidth + gap);
+---
+
+<section
+  class="carousel-container"
+  role="region"
+  aria-label="Featured products"
+>
+  <div class="carousel-wrapper">
+    <div
+      class="carousel-track"
+      style={`--item-width: ${itemWidth}px; --gap: ${gap}px; --total-items: ${carouselProducts.length}; --scroll-width: ${singleSetWidth}px;`}
+    >
+      {
+        products.map((product) => (
+          <div class="carousel-item">
+            <ProductCard product={product} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    overflow: hidden;
+    height: 200px;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: var(--gap);
+    width: max-content;
+    animation: scroll 30s linear infinite;
+  }
+
+  .carousel-item {
+    flex-shrink: 0;
+    width: var(--item-width);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1 * var(--scroll-width)));
+    }
+  }
+
+  .carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+  .carousel-track {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .carousel-wrapper {
+      height: 180px;
+    }
+
+    .carousel-item {
+      width: min(300px, 85vw);
+    }
+
+    .carousel-track {
+      --item-width: min(300px, 85vw);
+      animation-duration: 40s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-track {
+      animation: none;
+      overflow-x: auto;
+    }
+
+    .carousel-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+  }
+</style>

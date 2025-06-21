@@ -1,0 +1,26 @@
+---
+import type { CarouselProduct } from "../../../types/index";
+import { Image } from "astro:assets";
+const { product } = Astro.props as { product: CarouselProduct };
+---
+
+<button
+  class="w-[350px] h-[200px] flex-shrink-0 relative cursor-pointer"
+  onclick="alert('This will open modal later')"
+>
+  <Image
+    src={product.image}
+    alt={product.name}
+    width={350}
+    height={200}
+    class="w-full h-full object-cover rounded-lg"
+    loading="lazy"
+  />
+  <div
+    class="absolute inset-0 bg-black/85 rounded-lg flex items-center justify-center"
+  >
+    <p class="text-white text-lg font-medium px-4 py-2 rounded">
+      {product.category}
+    </p>
+  </div>
+</button>

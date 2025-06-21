@@ -1,0 +1,21 @@
+---
+import Particles from "astro-particles";
+import { options } from "../../lib/particlesOptions";
+---
+
+<script>
+  import { type Container, type Engine, tsParticles } from "tsparticles-engine";
+  import { loadFull } from "tsparticles";
+
+  window.particlesInit = async function (engine: Engine) {
+    await loadFull(engine);
+  };
+
+  window.particlesLoaded = function (container: Container) {
+    console.log("particlesLoaded callback");
+  };
+</script>
+
+<div class="absolute inset-0 z-[-1]">
+  <Particles id="tsparticles" options={options} init="particlesInit" />
+</div>

@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import LogoImage from "../../assets/images/logo.png";
+---
+
+<div class="max-h-[100vh] h-screen flex justify-center md:max-h-[80vh]">
+  <Image
+    src={LogoImage}
+    alt="BeeJoySelf Logo"
+    width={1000}
+    height={1000}
+    class="object-contain max-w-full max-h-full"
+  />
+</div>
