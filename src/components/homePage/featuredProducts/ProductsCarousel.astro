@@ -65,11 +65,15 @@ const singleSetWidth = carouselProducts.length * (itemWidth + gap);
     gap: var(--gap);
     width: max-content;
     animation: scroll 30s linear infinite;
+    align-items: center;
+    height: 100%;
+    /* Remove padding that was reducing height */
   }
 
   .carousel-item {
     flex-shrink: 0;
     width: var(--item-width);
+    height: 200px; /* Fixed height matching the card */
   }
 
   @keyframes scroll {
@@ -95,16 +99,51 @@ const singleSetWidth = carouselProducts.length * (itemWidth + gap);
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .carousel-wrapper {
-      height: 180px;
-    }
-
-    .carousel-item {
-      width: min(300px, 85vw);
+      height: 200px; /* Keep consistent */
     }
 
     .carousel-track {
-      --item-width: min(300px, 85vw);
+      --item-width: min(280px, 75vw);
+      --gap: 12px;
       animation-duration: 40s;
+    }
+
+    .carousel-item {
+      width: var(--item-width);
+      height: 200px; /* Keep consistent */
+    }
+  }
+
+  /* Smaller mobile screens */
+  @media (max-width: 480px) {
+    .carousel-wrapper {
+      height: 200px; /* Keep consistent */
+    }
+
+    .carousel-track {
+      --item-width: min(250px, 70vw);
+      --gap: 10px;
+      animation-duration: 45s;
+    }
+
+    .carousel-item {
+      height: 200px; /* Keep consistent */
+    }
+  }
+
+  /* Very small screens */
+  @media (max-width: 390px) {
+    .carousel-wrapper {
+      height: 200px; /* Keep consistent */
+    }
+
+    .carousel-track {
+      --item-width: min(220px, 65vw);
+      --gap: 8px;
+    }
+
+    .carousel-item {
+      height: 200px; /* Keep consistent */
     }
   }
 
